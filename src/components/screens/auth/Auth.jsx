@@ -5,9 +5,10 @@ import Field from '../../ui/field/Field'
 import Layout from '../../layout/Layout'
 import styles from './Auth.module.scss'
 
-import { useAuthPage } from '../../../hooks/useAuthPage'
+import { useAuthPage } from './useAuthPage'
 
 const Auth = () => {
+  
   const { errors, handleSubmit, isLoading, onSubmit, 
   register, setType } = useAuthPage()
 
@@ -53,31 +54,3 @@ const Auth = () => {
 }
 
 export default Auth
-
-
-
-
-
-
-// Второй вариант, более стандартный
-// 
-// import { useState } from 'react'
-// import Layout from '../../layout/Layout'
-
-// const Auth = () => {
-// const [email, setEmail] = useState('')
-
-//   return (
-//   <Layout heading = 'Sign in' bgImage = '/images/auth-bg.jpg'>
-//     <div className = 'wrapper-inner-page'>
-//       <input type = 'text' 
-//       placeholder = 'Enter email'
-//       value = {email}
-//       onChange = {e => setEmail(e.target.value)}
-//       />
-//     </div>
-//   </Layout>
-//   )
-// }
-
-// export default Aut

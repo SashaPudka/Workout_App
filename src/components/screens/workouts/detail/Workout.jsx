@@ -42,7 +42,8 @@ const Workout = () => {
 					{/* {errorCompleted && <Alert type='error' text={errorCompleted} />} */}
 				</div>
 				{isLoading ? (
-					<Loader /> ) : (
+					<Loader /> 
+					) : (
 				  <div className = {styles.wrapper}>
 					{workoutLog?.exerciseLog?.map(( exerciseLog, index) => (
 						<Fragment key = {exerciseLog.id}>

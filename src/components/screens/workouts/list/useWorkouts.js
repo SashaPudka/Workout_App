@@ -20,15 +20,13 @@ export const useWorkouts = () => {
 		isLoading,
 		isSuccess: isSuccessMutate,
 		error
-	} = useMutation(
-		['Create new workout log'],
-		workoutId => WorkoutLogService.create(workoutId),
-		{
+	} = useMutation({
+		mutationKey: ['Create new workout log'],
+		mutationFn: (workoutId) => {WorkoutLogService.create(workoutId)},
 			onSuccess({ data }) {
 				navigate(`/workout/${data.id}`)
 			}
-		}
-	)
+		})
 
 	return {
 		data,

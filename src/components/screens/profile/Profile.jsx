@@ -3,11 +3,10 @@ import cn from 'clsx'
 import Loader from '../../ui/Loader'
 import Header from '../../layout/header/Header'
 import { useProfile } from './useProfile'
+
 import stylesLayout from '../../layout/Layout.module.scss'
 import styles from './Profile.module.scss'
 import Statistics from './statistics/Statistics'
-
-
 
 
 const Profile = () => {

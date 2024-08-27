@@ -1,7 +1,8 @@
 import Cookies from 'js-cookie'
-import { useLocation } from 'react-router-dom'
-import { useAuth } from './useAuth'
 import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
+
+import { useAuth } from './useAuth'
 import { TOKEN } from '../app.constants'
 
 export const useCheckToken = () => {

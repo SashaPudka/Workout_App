@@ -4,7 +4,6 @@ const USERS = '/users'
 
 class UserService {
     async getProfile(){
-
     return $axios.get(`${USERS}/profile`)
   }
 }
